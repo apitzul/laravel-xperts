@@ -23,14 +23,13 @@
             <label>Logo</label><br>
 
             @if($company->logo)
-                <div style="margin-bottom:10px;">
-                    <img src="data:image/png;base64,{{ base64_encode($company->logo) }}"
-                        width="80"
-                        height="80"
-                        style="object-fit:cover; border-radius:6px;">
-                </div>
-            @endif
-
+    <div style="margin-bottom:10px;">
+        <img src="{{ asset('storage/' . $company->logo) }}"
+            width="80"
+            height="80"
+            style="object-fit:cover; border-radius:6px;">
+    </div>
+@endif
             <input type="file" name="logo"
                 style="width:100%; padding:8px; border:1px solid #ccc; border-radius:5px;">
         </div>
