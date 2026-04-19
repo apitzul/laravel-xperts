@@ -18,7 +18,9 @@ return [
         ],
     ],
 
-
+    'api' => [
+        'driver' => 'sanctum',
+    ],
     'providers' => [
         'users' => [
             'driver' => 'eloquent',

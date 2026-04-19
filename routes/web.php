@@ -11,6 +11,14 @@ use App\Models\Employee;
 
 /*
 |--------------------------------------------------------------------------
+| PUBLIC API ROUTES
+|--------------------------------------------------------------------------
+*/
+// Route::prefix('api')->group(function () {
+//     Route::post('/login', [AuthController::class, 'apiLogin']);
+// });
+/*
+|--------------------------------------------------------------------------
 | PUBLIC ADMIN ROUTES
 |--------------------------------------------------------------------------
 */
@@ -35,6 +43,9 @@ Route::get('/', function () {
 Route::fallback(function () {
     return redirect()->route('admin.login');
 });
+
+
+Route::post('/login', [AuthController::class, 'apiLogin']);
 
 /*
 |--------------------------------------------------------------------------
