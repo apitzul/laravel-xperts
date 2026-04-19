@@ -13,4 +13,9 @@ protected $fillable = [
     'email',
     'logo',
 ];
+
+public function employees()
+{
+    return $this->hasMany(Employee::class);
+}
 }

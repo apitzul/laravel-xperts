@@ -18,6 +18,7 @@ protected $fillable = [
 {
     return $this->belongsTo(Company::class);
 }
+
 }
 
 
